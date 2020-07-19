@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="responseJson" format="json">
+      <types:shape format="weave" example="examples/ouputjson"><![CDATA[%dw 2.0
+
+type responseJson = {|
+  lastname: String, 
+  name: String, 
+  timmeZone: String, 
+  offfSet: String, 
+  fullName: String, 
+  temperatureCelcius: Number {"typeId": "int"}, 
+  dateTime: String, 
+  city: String, 
+  location: String
+|} {"example": "{\\\"lastname\\\":\\\"\\\",\\\"name\\\":\\\"\\\",\\\"timmeZone\\\":\\\"\\\",\\\"offfSet\\\":\\\"\\\",\\\"fullName\\\":\\\"\\\",\\\"temperatureCelcius\\\":0,\\\"dateTime\\\":\\\"\\\",\\\"city\\\":\\\"\\\",\\\"location\\\":\\\"\\\"}"}
+
+]]></types:shape>
+    </types:type>
+    <types:type name="requestJson" format="json">
+      <types:shape format="weave" example="examples/mapJson-1."><![CDATA[%dw 2.0
+
+type requestJson = {|
+  Header: Array<String>, 
+  Items: Array<String>
+|} {"example": "{\\\"Header\\\":[\\\"name\\\",\\\"lastName\\\",\\\"dateTime\\\",\\\"city\\\",\\\"country\\\"],\\\"Items\\\":[\\\"John\\\",\\\"Smith\\\",\\\"31012019T1900Z\\\",\\\"Australia\\\",\\\"Melbourne\\\"]}"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#1a27e1fc-90e2-4f73-836f-3297c99adedb">
+    <types:processor-declaration>
+      <types:input-event>
+        <types:message>
+          <types:payload type="requestJson"/>
+        </types:message>
+      </types:input-event>
+      <types:output-event>
+        <types:message>
+          <types:payload type="responseJson"/>
+        </types:message>
+      </types:output-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>
