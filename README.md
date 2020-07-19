@@ -32,7 +32,8 @@
       "Australia",
       "Melbourne"
    ]
-}```
+}
+```
 
 ## Endpoint:
 -------------------
@@ -43,6 +44,7 @@ http://localhost:8081/jsontransformation
 ---------------------
 It will look like
 
+```
 {
   "lastname": "Smith",
   "name": "John",
@@ -54,4 +56,4 @@ It will look like
   "city": "Melbourne",
   "location": "Australia"
 }
-
+```
