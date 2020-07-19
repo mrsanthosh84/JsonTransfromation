@@ -1,6 +1,6 @@
-## Json Tranformation
+# Json Tranformation
 
-# Technical stack usage:
+## Technical stack usage:
 ----------------------
 
 - Java 1.8
@@ -9,7 +9,7 @@
 - Maven
 - Postman
 
-# Instructions are:
+## Instructions are:
 ---------------------
 
 1) Import maven project into Anypoint studio
@@ -34,12 +34,12 @@
    ]
 }
 
-# Endpoint:
+## Endpoint:
 -------------------
 http://localhost:8081/jsontransformation
 
 
-# Output Json Response:
+## Output Json Response:
 ---------------------
 It will look like
 
