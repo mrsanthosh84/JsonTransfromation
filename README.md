@@ -17,7 +17,7 @@
 3) Check the console log and verify the project deployed successfully
 4) Using the browsers or postman run below endpoint
 5) Passing request paremeter has json value mentioned below and HTTP method must be POST
-	{
+```{
    "Header":[
       "name",
       "lastName",
@@ -32,7 +32,7 @@
       "Australia",
       "Melbourne"
    ]
-}
+}```
 
 ## Endpoint:
 -------------------
